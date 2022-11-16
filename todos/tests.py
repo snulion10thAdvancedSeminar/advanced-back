@@ -22,7 +22,8 @@ class TestTodos(APITestCase):
         response = self.client.get(url)
         print(serializer.data)
         print(response.json())
-        self.assertEqual(serializer.data, response.json())
+        # self.assertEqual(serializer.data, response.json())
+        self.assertEqual(serializer.data, "")
         self.assertEqual(200, response.status_code)
     
     def test_post_todos(self):
