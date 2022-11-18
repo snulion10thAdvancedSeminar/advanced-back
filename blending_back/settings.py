@@ -117,6 +117,9 @@ WSGI_APPLICATION = 'blending_back.wsgi.application'
 #     }
 # }
 
+ROOT_DIR = os.path.dirname(BASE_DIR)
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
