@@ -28,15 +28,15 @@ jobs:
       with:
         switches: -avzr --delete
         remote_path: /home/ubuntu/srv/ubuntu/
-        remote_host: ${{ secrets.HOST }}
+        remote_host: ${{ secrets.EC2_HOST }}
         remote_user: ubuntu
-        remote_key: ${{ secrets.KEY }}
+        remote_key: ${{ secrets.PEM_KEY }}
 
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
+        host: ${{ secrets.EC2_HOST }}
         username: ubuntu
-        key: ${{ secrets.KEY }}
+        key: ${{ secrets.PEM_KEY }}
         script: |
           sh /home/ubuntu/srv/ubuntu/config/scripts/deploy.sh
