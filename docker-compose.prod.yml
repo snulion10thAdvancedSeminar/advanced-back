@@ -23,7 +23,7 @@ services:
     container_name: nginx
     build: ./config/nginx 
     volumes:
-      - static:/home/app/web/static
+      - static:/home/app/.static_root
       - media:/home/app/web/media
     ports:
       - "80:80"
