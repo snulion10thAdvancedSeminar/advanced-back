@@ -118,7 +118,7 @@ DATABASES = {
 }
 
 ROOT_DIR = os.path.dirname(BASE_DIR)
-STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
+STATIC_ROOT = os.path.join(ROOT_DIR, '/web/static')
 
 # DATABASES = {
 #     'default': {
